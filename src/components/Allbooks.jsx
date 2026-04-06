@@ -1,18 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import Book from "./Book";
+import { BookContext } from "../context/BookContext";
 
 const Allbooks = () => {
-  const [books, setBooks] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("/data/booksData.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setBooks(data);
-        setLoading(false);
-      });
-  }, []);
+    const { books, loading } = useContext(BookContext)
 
   if (loading) return <p>Loading...</p>;
   return (

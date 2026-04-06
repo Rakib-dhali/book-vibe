@@ -1,8 +1,9 @@
 import { FaRegStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Book = ({ book }) => {
   return (
-    <div className="p-6 rounded-2xl border border-naviblue/15 font-worksans space-y-5">
+    <Link to={`/bookdetails/${book.bookId}`} className="p-6 rounded-2xl border border-naviblue/15 font-worksans space-y-5">
       <div className="flex items-center justify-center bg-[#f3f3f3] p-8">
         <img className="w-33.5" src={book.image} alt="" />
       </div>
@@ -22,7 +23,7 @@ const Book = ({ book }) => {
           {book.rating} <FaRegStar color="#131313" />
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
