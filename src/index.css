@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@theme {
+    --font-worksans:"Work Sans", sans-serif;
+    --font-playfair:"Playfair", serif;
+    --color-naviblue: #131313;
+    --color-lightgreen: #23BE0A;
+    --color-lightblue: #328EFF;
+    --color-lightorange: #FFAC33;
+
+ }
